@@ -33,20 +33,21 @@ const MovieDetail = () => {
 
   return (
     <div>
-      {" "}
-      <Card>
-        <Card.Img variant="top" src={movieDetails.Poster} />
-        <Card.Body>
-          <Card.Title>Titolo: {movieDetails.Title}</Card.Title>
-          <Card.Text>Anno: {movieDetails.Year}</Card.Text>
-          <Card.Text>Uscita: {movieDetails.Released}</Card.Text>
-          <Card.Text>Attori: {movieDetails.Actors}</Card.Text>
-          <Card.Text>Scrittori: {movieDetails.Writer}</Card.Text>
-          <Card.Text>Premi: {movieDetails.Awards}</Card.Text>
-          <Card.Text>Direttore: {movieDetails.Director}</Card.Text>
-          <Card.Text>Genere: {movieDetails.Genre}</Card.Text>
-        </Card.Body>
-      </Card>
+      {movieDetails && (
+        <Card>
+          <Card.Img variant="top" src={movieDetails.Poster} />
+          <Card.Body>
+            <Card.Title>Titolo: {movieDetails.Title}</Card.Title>
+            <Card.Text>Anno: {movieDetails.Year}</Card.Text>
+            <Card.Text>Uscita: {movieDetails.Released}</Card.Text>
+            <Card.Text>Attori: {movieDetails.Actors}</Card.Text>
+            <Card.Text>Scrittori: {movieDetails.Writer}</Card.Text>
+            <Card.Text>Premi: {movieDetails.Awards}</Card.Text>
+            <Card.Text>Direttore: {movieDetails.Director}</Card.Text>
+            <Card.Text>Genere: {movieDetails.Genre}</Card.Text>
+          </Card.Body>
+        </Card>
+      )}
     </div>
   );
 };
