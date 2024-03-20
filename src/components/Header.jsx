@@ -1,4 +1,10 @@
+import { Link, useLocation } from "react-router-dom";
+
 const Header = function () {
+  //
+  const location = useLocation();
+  console.log("LOCATION", location);
+  //
   return (
     <div>
       <nav
@@ -28,11 +34,15 @@ const Header = function () {
                   Home
                 </a>
               </li>
+              {/* ------------------------ */}
               <li className="nav-item">
-                <a className="nav-link  active fw-bold" href="#">
-                  TV Shows
-                </a>
+                <Link to="/tv-shows" id="navLink">
+                  <div className={location.pathname === "/tv-shows" ? "nav-link active" : "nav-link"} id="navLink">
+                    TV Shows
+                  </div>
+                </Link>
               </li>
+              {/* ------------------------ */}
               <li className="nav-item">
                 <a className="nav-link fw-bold" href="#">
                   Movies

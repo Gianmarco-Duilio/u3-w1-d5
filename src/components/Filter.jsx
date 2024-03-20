@@ -21,19 +21,19 @@ const Filter = () => {
                 >
                   Genres
                 </Btn>
-                <ul class="dropdown-menu bg-dark ">
+                <ul className="dropdown-menu bg-dark ">
                   <li>
-                    <a class="dropdown-item text-white" href="#">
+                    <a className="dropdown-item text-white" href="#">
                       Comedy
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item text-white" href="#">
+                    <a className="dropdown-item text-white" href="#">
                       Drama
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item text-white" href="#">
+                    <a className="dropdown-item text-white" href="#">
                       Thriller
                     </a>
                   </li>
@@ -42,8 +42,8 @@ const Filter = () => {
             </div>
           </div>{" "}
           <div>
-            <i class="bi bi-grid icons"></i>
-            <i class="bi bi-grid-3x3 icons"></i>
+            <i className="bi bi-grid icons"></i>
+            <i className="bi bi-grid-3x3 icons"></i>
           </div>
         </div>
       </Row>

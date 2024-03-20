@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Spinner from "react-bootstrap/Spinner";
+import { Link } from "react-router-dom";
 
 class LineThree extends Component {
   state = {
@@ -41,7 +42,9 @@ class LineThree extends Component {
             <Row>
               {this.state.firstArray.map((film) => (
                 <Col xs={6} sm={4} md={2} key={film.imdbID} id="film">
-                  <img src={film.Poster} alt={film.Title} className=" img-fluid my-2" />
+                  <Link to={"/movie-details/" + film.imdbID}>
+                    <img src={film.Poster} alt={film.Title} className=" img-fluid my-2" />
+                  </Link>
                 </Col>
               ))}
             </Row>
